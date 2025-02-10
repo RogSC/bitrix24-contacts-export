@@ -45,3 +45,5 @@ Thumbs.db
 
 !local/php_interface/migrations/*/*.xml
 /.osp
+
+composer.lock
