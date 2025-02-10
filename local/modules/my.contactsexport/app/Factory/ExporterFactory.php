@@ -1,10 +1,10 @@
 <?php
 
-namespace ContactsExport\Repository;
+namespace My\ContactsExport\Factory;
 
-use ContactsExport\Interface\ExporterInterface;
-use ContactsExport\Service\CSVExporter;
-use ContactsExport\Service\ExcelExporter;
+use My\ContactsExport\Interface\ExporterInterface;
+use My\ContactsExport\Service\CSVExporter;
+use My\ContactsExport\Service\ExcelExporter;
 
 class ExporterFactory {
 	public static function createExporter(string $format): ExporterInterface {

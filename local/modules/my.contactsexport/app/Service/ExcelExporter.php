@@ -1,17 +1,19 @@
 <?php
 
-namespace ContactsExport\Service;
+namespace My\ContactsExport\Service;
 
-use ContactsExport\Interface\ExporterInterface;
+use My\ContactsExport\Interface\ExporterInterface;
 
 class ExcelExporter implements ExporterInterface {
+	public const FILE_EXTENSION = 'xlsx';
+
 	public function export(array $data): string {
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();
 
 		if (!empty($data)) {
 			$col = 'A';
-			foreach (array_keys($data[0]) as $header) {
+			foreach (array_keys(current($data)) as $header) {
 				$sheet->setCellValue($col . '1', $header);
 				$col++;
 			}

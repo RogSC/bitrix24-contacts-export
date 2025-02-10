@@ -3,7 +3,7 @@
 use Bitrix\Main\EventManager;
 use Bitrix\Main\ModuleManager;
 
-class contacts_export extends CModule
+class my_contactsexport extends CModule
 {
     /**
      * @var \Bitrix\Main\EventManager
@@ -23,21 +23,19 @@ class contacts_export extends CModule
             $this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
         }
 
-        $this->MODULE_ID = 'contacts.export';
+        $this->MODULE_ID = 'my.contactsexport';
         $this->MODULE_NAME = 'Модуль экспорта контактов в excel/csv';
         $this->PARTNER_NAME = '';
         $this->PARTNER_URI = '';
         $this->eventManager = EventManager::getInstance();
     }
 
-    public function DoInstall(): bool
+    public function DoInstall()
     {
         ModuleManager::registerModule($this->MODULE_ID);
-
-        return true;
     }
 
-    public function DoUninstall(): bool
+    public function DoUninstall()
     {
         ModuleManager::unRegisterModule($this->MODULE_ID);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ContactsExport\Interface;
+namespace My\ContactsExport\Interface;
 
 interface ExporterInterface {
 	/**
