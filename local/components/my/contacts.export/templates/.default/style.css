@@ -1,0 +1,20 @@
+.exporter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.exporter-format {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.exporter-format__title {
+    font-size: 16px;
+    color: #333333;
+}
+.exporter-format__select {
+
+}
+.exporter-button {
+
+}
