@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "ContactsExport\\App\\": "app/"
+    }
+  },
+  "require": {
+    "phpoffice/phpspreadsheet": "^4.0"
+  }
+}
